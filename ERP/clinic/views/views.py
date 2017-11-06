@@ -23,12 +23,14 @@ def login(request):
                     request.session['brand_id'] = userlogin.brand_id
                     return HttpResponseRedirect("/CRM-DentalClinic-Overview")
             except Exception as e:
+                print(e)
                 messages.error(request, 'Có phát sinh lỗi hệ thống hoặc tài khoản này không tồn tại!')
                 return render(request, 'login.html')
         # elif request.session.has_key('user_id') and request.session.has_key('user_name') and request.session['role']:
         #     return HttpResponseRedirect(request,"index")
         return render(request, 'login.html')
     except Exception as e:
+        print(e)
         messages.error(request, 'Có phát sinh lỗi hệ thống hoặc tài khoản này không tồn tại!')
         return render(request, 'login.html')
 
@@ -42,17 +44,7 @@ def logout(request):
        pass
     return HttpResponseRedirect("/login")
 
-def crm_dentalclinic_overview(request):
-    return render(request,"clinic/crm_dentalclinic_overview.html")
 
-def crm_contactcenter_overview(request):
-    return render(request,"clinic/crm_contactcenter_overview.html")
-
-def crm_openchannel_overview(request):
-    return render(request,"clinic/crm_openchannel_overview.html")
-
-def crm_ordermanagement_overview(request):
-    return render(request,"clinic/crm_ordermanagement_overview.html")
 
 
 

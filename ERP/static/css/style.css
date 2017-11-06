@@ -1,17 +1,20 @@
-.btn {
+/*.btn {
     min-width: 100px;
 }
-
+*/
 .input-span {
     background-color: #337AB7 !important;
 }
 .input-span i{
     color: #FFFFFF;
 }
-
+html{
+    height: 100%;
+}
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
+    min-height: 100%;
 }
 a{
     font-size: 13px !important;
@@ -19,7 +22,11 @@ a{
 
 #left-pattern{
     min-width: 300px;
+    /*min-height: 100%;*/
+    /*height: 100%;*/
+    border-right: 1px solid #DFDFDF;
 }
+
 #navbar-menu{
 	height: 50px !important;
 }
@@ -53,7 +60,6 @@ a{
 #menu-second{
     background: #f7f6f6;
     border-bottom: 1px solid #5cb85c;
-    box-shadow: 4px 2px 0 #000;
 }
 #menu-second .nav-tabs{
     border-bottom:0;
@@ -71,9 +77,9 @@ a{
     color: #fff;
     border:0;
 }
-#main-body{
-    background: #d6d6d6;
-}
+/*#main-body{
+    position: relative;
+}*/
 #main-body .profile{
     padding: 0;
     width: 100%;
@@ -94,21 +100,18 @@ a{
     font-size: 30px;
     margin-top: 10px;
 }*/
-#main-body .container{
-    background: #fff;
-}
+
 #main-body .flex-column{
     width: 100%;
+    height: 100%;
 }
 #main-body .flex-column .nav-link{
     color: rgba(0,0,0,.5);
-    padding: 22px 15px 22px 30px;
     border-bottom: 1px solid #dfdfdf;
-    border-right: 1px solid #dfdfdf;
+    height: 60px;
+    padding: auto;
 }
-#main-body .flex-column .nav-link:last-of-type{
-    border-bottom: 0;
-}
+
 #main-body .flex-column .nav-link.active{
     background: #2196f3;
     color: #fff;
@@ -117,6 +120,12 @@ a{
     background: #2196f3;
     color: #fff;
 }
+
+/*#main-body .flex-column .nav-link:selected{
+    background: #2196f3;
+    color: #fff;
+}*/
+
 /*#main-body i{
     float: right;
     margin-top: 3px;
@@ -151,6 +160,10 @@ a{
 .modal-dialog .list tbody td:last-child(){
     text-align: center;
 }
+
+.table{
+    border-top: none;
+}
 .table td, .table th{
     padding: 0.5rem;
 }
@@ -171,3 +184,31 @@ a{
 #search-form span{
     background-color: #2196F3;
 }
+
+.main-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.status-pendingpayment{
+    color: #e34500;
+    }
+.status-active{
+    color: #2E2EFE;
+    }
+.status-checked{
+    color:#01DF01;
+    }
+.status-onway{
+    color: #424242;
+    }
+.status-booked{
+    color: #212121;
+    }
+.status-follow{
+    color: #D9534F;
+    }
+.status-done{
+    color: #212121;
+    }

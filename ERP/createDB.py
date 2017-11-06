@@ -2,15 +2,43 @@ import os
 import django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ERP.settings");
 django.setup()
- 
-# from clinic.models import CalendarAppointment
-# from clinic.models import Customer
+
+from clinic.models import Appointment
+from clinic.models import Customer
 from clinic.models import User
 # from clinic.models import Treatment
 
-User.objects.create(brand_id ='001',user_id = '0001',user_login_id = 'D001',user_password = '1234',user_role = '1',user_name = 'Trần Trung Hiến',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
-User.objects.create(brand_id ='001',user_id = '0002',user_login_id = 'R001',user_password = '1234',user_role = '2',user_name = 'Trần Trung ',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
-User.objects.create(brand_id ='001',user_id = '0003',user_login_id = 'M001',user_password = '1234',user_role = '0',user_name = 'Trần',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
+# User.objects.create(brand_id ='1',user_id = '1',user_login_id = 'D001',user_password = '1234',user_role = '1',user_name = 'Trần Trung Hiến',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
+# User.objects.create(brand_id ='1',user_id = '2',user_login_id = 'R001',user_password = '1234',user_role = '2',user_name = 'Trần Trung ',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
+# User.objects.create(brand_id ='1',user_id = '3',user_login_id = 'M001',user_password = '1234',user_role = '0',user_name = 'Trần',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
+
+
+# Customer.objects.create(brand_id = "1", customer_id = "1", customer_name = "Phạm Tú", customer_sex = "Nam", customer_dob = "01-01-1991", customer_job = "Nhân viên văn phòng", customer_company = "Cty CP FunnyDay", customer_phone_number = "0906858628", customer_email = "jostrunghien@gmail.com", customer_address = "1079CMT8", customer_source = "", customer_fingerprint = "")
+# Customer.objects.create(brand_id = "1", customer_id = "2", customer_name = "Phạm Tình", customer_sex = "Nam", customer_dob = "02-01-1991", customer_job = "Nhân viên văn phòng", customer_company = "Cty CP FunnyDay", customer_phone_number = "0906858628", customer_email = "jostrunghien@gmail.com", customer_address = "1079CMT8", customer_source = "", customer_fingerprint = "")
+# Customer.objects.create(brand_id = "1", customer_id = "3", customer_name = "Phạm Tu", customer_sex = "Nam", customer_dob = "03-01-1991", customer_job = "Nhân viên văn phòng", customer_company = "Cty CP FunnyDay", customer_phone_number = "0906858628", customer_email = "jostrunghien@gmail.com", customer_address = "1079CMT8", customer_source = "", customer_fingerprint = "")
+
+
+# Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "1",treatment_id = "1",appointment_id = "1",appointment_date = "04-11-2017",appointment_time = "09:00",appointment_name = "Làm gì đó",appointment_content = "Là làm cái gì",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "0",appointment_status = "0",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+# Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatment_id = "2",appointment_id = "2",appointment_date = "04-11-2017",appointment_time = "10:00",appointment_name = "Làm gì đi",appointment_content = "uh",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "1",appointment_status = "1",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "1",treatment_id = "3",appointment_id = "3",appointment_date = "04-11-2017",appointment_time = "09:00",appointment_name = "Làm gì đó",appointment_content = "Là làm cái gì",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "0",appointment_status = "2",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatment_id = "4",appointment_id = "4",appointment_date = "04-11-2017",appointment_time = "10:00",appointment_name = "Làm gì đi",appointment_content = "uh",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "1",appointment_status = "3",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "1",treatment_id = "5",appointment_id = "5",appointment_date = "04-11-2017",appointment_time = "09:00",appointment_name = "Làm gì đó",appointment_content = "Là làm cái gì",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "0",appointment_status = "4",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatment_id = "6",appointment_id = "6",appointment_date = "04-11-2017",appointment_time = "10:00",appointment_name = "Làm gì đi",appointment_content = "uh",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "1",appointment_status = "5",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatment_id = "7",appointment_id = "7",appointment_date = "04-11-2017",appointment_time = "10:00",appointment_name = "Làm gì đi",appointment_content = "uh",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "1",appointment_status = "6",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
+
+
+
+
+
+
+
+
+
+
+
+
+
+# old
 
 # CalendarAppointment.objects.create(brand_id = '001' ,user_id = 'R001' ,customer_id = 'CUS001', appointment_id = 'A001', treatment_id = 'T001', date_appointment = '06-09-2017',time_appointment = '09:00',appointment_name = 'face-care', content = 'face-care', assign_id = 'D001', estimated_time = '30',estimated_difficulty = '1',status = '0',note ='none', create_date = '07-06-2017', create_by = 'D001', update_date = '07-06-2017', update_by = 'D001', delete_flag = '0')
 # CalendarAppointment.objects.create(brand_id = '001' ,user_id = 'R001' ,customer_id = 'CUS002', appointment_id = 'A002', treatment_id = 'T002', date_appointment = '06-09-2017',time_appointment = '10:00',appointment_name = 'Nhổ răng 31 & cạo vôi', content = 'Cắt chỉ, nhổ răng 18, nhớ chụp film CB', assign_id = 'D001', estimated_time = '30',estimated_difficulty = '1',status = '1',note ='none', create_date = '07-06-2017', create_by = 'D001', update_date = '07-06-2017', update_by = 'D001', delete_flag = '0')

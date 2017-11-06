@@ -32,13 +32,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'clinic',
-    # 'cccc',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ERP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'green',
+        'NAME': 'green1',
         'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost',
@@ -131,3 +131,24 @@ STATICFILES_DIRS = (
     ('images' , os.path.join(STATIC_ROOT, 'images')),
     ('font-awesome' , os.path.join(STATIC_ROOT, 'font-awesome')),
 )
+
+LOGGING_PATH = os.path.join(BASE_DIR, 'log')
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': LOGGING_PATH +'/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
